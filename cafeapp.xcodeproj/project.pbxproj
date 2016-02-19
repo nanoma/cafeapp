@@ -14,6 +14,10 @@
 		4DFB43CE1C72BE9600D5F725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFB43CC1C72BE9600D5F725 /* LaunchScreen.storyboard */; };
 		4DFB43D91C72BE9600D5F725 /* cafeappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43D81C72BE9600D5F725 /* cafeappTests.swift */; };
 		4DFB43E41C72BE9600D5F725 /* cafeappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43E31C72BE9600D5F725 /* cafeappUITests.swift */; };
+		4DFB43F71C72CCCE00D5F725 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43F51C72CCCE00D5F725 /* ListTableViewController.swift */; };
+		4DFB43F81C72CCCE00D5F725 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFB43F61C72CCCE00D5F725 /* ListTableViewController.xib */; };
+		4DFB445A1C77659C00D5F725 /* TorokuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB44581C77659C00D5F725 /* TorokuTableViewController.swift */; };
+		4DFB445B1C77659C00D5F725 /* TorokuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFB44591C77659C00D5F725 /* TorokuTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		4DFB43DF1C72BE9600D5F725 /* cafeappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cafeappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFB43E31C72BE9600D5F725 /* cafeappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafeappUITests.swift; sourceTree = "<group>"; };
 		4DFB43E51C72BE9600D5F725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFB43F51C72CCCE00D5F725 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		4DFB43F61C72CCCE00D5F725 /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
+		4DFB44581C77659C00D5F725 /* TorokuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorokuTableViewController.swift; sourceTree = "<group>"; };
+		4DFB44591C77659C00D5F725 /* TorokuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TorokuTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,14 @@
 			children = (
 				4DFB43C31C72BE9600D5F725 /* AppDelegate.swift */,
 				4DFB43C51C72BE9600D5F725 /* ViewController.swift */,
+				4DFB43F51C72CCCE00D5F725 /* ListTableViewController.swift */,
+				4DFB43F61C72CCCE00D5F725 /* ListTableViewController.xib */,
 				4DFB43C71C72BE9600D5F725 /* Main.storyboard */,
 				4DFB43CA1C72BE9600D5F725 /* Assets.xcassets */,
 				4DFB43CC1C72BE9600D5F725 /* LaunchScreen.storyboard */,
 				4DFB43CF1C72BE9600D5F725 /* Info.plist */,
+				4DFB44581C77659C00D5F725 /* TorokuTableViewController.swift */,
+				4DFB44591C77659C00D5F725 /* TorokuTableViewController.xib */,
 			);
 			path = cafeapp;
 			sourceTree = "<group>";
@@ -232,6 +244,8 @@
 				4DFB43CE1C72BE9600D5F725 /* LaunchScreen.storyboard in Resources */,
 				4DFB43CB1C72BE9600D5F725 /* Assets.xcassets in Resources */,
 				4DFB43C91C72BE9600D5F725 /* Main.storyboard in Resources */,
+				4DFB43F81C72CCCE00D5F725 /* ListTableViewController.xib in Resources */,
+				4DFB445B1C77659C00D5F725 /* TorokuTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +272,8 @@
 			files = (
 				4DFB43C61C72BE9600D5F725 /* ViewController.swift in Sources */,
 				4DFB43C41C72BE9600D5F725 /* AppDelegate.swift in Sources */,
+				4DFB445A1C77659C00D5F725 /* TorokuTableViewController.swift in Sources */,
+				4DFB43F71C72CCCE00D5F725 /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +498,7 @@
 				4DFB43EA1C72BE9600D5F725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DFB43EB1C72BE9600D5F725 /* Build configuration list for PBXNativeTarget "cafeappTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +507,7 @@
 				4DFB43ED1C72BE9600D5F725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DFB43EE1C72BE9600D5F725 /* Build configuration list for PBXNativeTarget "cafeappUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +516,7 @@
 				4DFB43F01C72BE9600D5F725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,25 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cafeapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5za-eU-SPe">
+                                <rect key="frame" x="157" y="545" width="60" height="30"/>
+                                <state key="normal" title="登録一覧"/>
+                                <connections>
+                                    <segue destination="hzo-iO-tuy" kind="presentation" id="W0u-OU-srL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gll-TO-TtS">
+                                <rect key="frame" x="67" y="75" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PA-bb-GLN">
+                                <rect key="frame" x="142" y="424" width="90" height="30"/>
+                                <state key="normal" title="カフェを登録"/>
+                                <connections>
+                                    <segue destination="yq4-3w-SYR" kind="show" id="oCG-IZ-NQi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="39.5" y="306.5"/>
+        </scene>
+        <!--登録一覧-->
+        <scene sceneID="fGZ-oy-XMc">
+            <objects>
+                <tableViewController id="Y7g-bU-3Hm" customClass="ListTableViewController" customModule="cafeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oer-Pa-vZo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="ZDH-jC-Xkh">
+                                <rect key="frame" x="0.0" y="92" width="375" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDH-jC-Xkh" id="wI5-gy-efm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Y7g-bU-3Hm" id="mQL-oq-r6Z"/>
+                            <outlet property="delegate" destination="Y7g-bU-3Hm" id="tjc-Zb-jba"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="登録一覧" id="8hp-b0-Wi4">
+                        <barButtonItem key="leftBarButtonItem" title="TOPへ" id="PWD-Zv-TAl"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Mz-Un-DP9"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5h-OP-ufL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.5" y="1111.5"/>
+        </scene>
+        <!--新規登録-->
+        <scene sceneID="xmQ-o1-hAc">
+            <objects>
+                <viewController id="yq4-3w-SYR" customClass="TorokuViewController" customModule="cafeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tia-yO-ZTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="rxL-3r-RAo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vun-aE-DS4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJU-dY-GKO">
+                                <rect key="frame" x="0.0" y="91" width="375" height="255"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rif-uW-lqm">
+                                <rect key="frame" x="35" y="611" width="48" height="30"/>
+                                <state key="normal" title="Twitter"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aod-NX-RMR">
+                                <rect key="frame" x="293" y="611" width="67" height="30"/>
+                                <state key="normal" title="Facebook"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U59-DF-zwG">
+                                <rect key="frame" x="67" y="397" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">メモ
+ユーザーが書き込める？？</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-VA-ccX">
+                                <rect key="frame" x="0.0" y="288" width="180" height="46"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="0.37" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新規登録" id="pzk-O0-Ttq">
+                        <barButtonItem key="leftBarButtonItem" title="TOPへ" id="QaQ-xL-Ysp"/>
+                        <barButtonItem key="rightBarButtonItem" title="save" id="fok-AN-MNO"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrX-gB-bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561.5" y="306.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5tk-MB-6ac">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzo-iO-tuy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rva-IY-2Ua">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y7g-bU-3Hm" kind="relationship" relationship="rootViewController" id="Sr3-9c-ZWg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LP8-wW-Nmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293.5" y="1111.5"/>
         </scene>
     </scenes>
 </document>
