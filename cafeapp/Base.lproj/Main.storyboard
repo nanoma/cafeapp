@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="157" y="545" width="60" height="30"/>
                                 <state key="normal" title="登録一覧"/>
                                 <connections>
-                                    <segue destination="hzo-iO-tuy" kind="presentation" id="W0u-OU-srL"/>
+                                    <segue destination="hzo-iO-tuy" kind="modal" id="W0u-OU-srL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gll-TO-TtS">
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="142" y="424" width="90" height="30"/>
                                 <state key="normal" title="カフェを登録"/>
                                 <connections>
-                                    <segue destination="yq4-3w-SYR" kind="show" id="oCG-IZ-NQi"/>
+                                    <segue destination="sGr-ez-LOd" kind="modal" id="oCG-IZ-NQi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.5" y="306.5"/>
+            <point key="canvasLocation" x="21.066666666666666" y="290.15333333333331"/>
         </scene>
         <!--登録一覧-->
         <scene sceneID="fGZ-oy-XMc">
@@ -52,12 +52,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="ZDH-jC-Xkh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="8lg-Tl-DrR" rowHeight="52" style="IBUITableViewCellStyleDefault" id="ZDH-jC-Xkh">
                                 <rect key="frame" x="0.0" y="92" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDH-jC-Xkh" id="wI5-gy-efm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8lg-Tl-DrR">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -68,13 +77,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="登録一覧" id="8hp-b0-Wi4">
                         <barButtonItem key="leftBarButtonItem" title="TOPへ" id="PWD-Zv-TAl"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Mz-Un-DP9"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5h-OP-ufL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.5" y="1111.5"/>
+            <point key="canvasLocation" x="662.5" y="1131.5"/>
         </scene>
         <!--新規登録-->
         <scene sceneID="xmQ-o1-hAc">
@@ -88,9 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJU-dY-GKO">
-                                <rect key="frame" x="0.0" y="91" width="375" height="255"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rif-uW-lqm">
                                 <rect key="frame" x="35" y="611" width="48" height="30"/>
                                 <state key="normal" title="Twitter"/>
@@ -100,20 +105,30 @@
                                 <state key="normal" title="Facebook"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U59-DF-zwG">
-                                <rect key="frame" x="67" y="397" width="240" height="128"/>
+                                <rect key="frame" x="79" y="448" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">メモ
 ユーザーが書き込める？？</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQz-Sg-EdK">
+                                <rect key="frame" x="4" y="121" width="369" height="277"/>
+                                <state key="normal" title="画像をアップロード"/>
+                                <connections>
+                                    <action selector="selctButtonTapped:" destination="yq4-3w-SYR" eventType="touchUpInside" id="YOh-Wo-koB"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-VA-ccX">
-                                <rect key="frame" x="0.0" y="288" width="180" height="46"/>
+                                <rect key="frame" x="-1" y="64" width="376" height="54"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="0.37" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJU-dY-GKO">
+                                <rect key="frame" x="0.0" y="117" width="376" height="285"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -122,10 +137,13 @@
                         <barButtonItem key="rightBarButtonItem" title="save" id="fok-AN-MNO"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cafeImageView" destination="HJU-dY-GKO" id="hpY-Ce-iPc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrX-gB-bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561.5" y="306.5"/>
+            <point key="canvasLocation" x="1116.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5tk-MB-6ac">
@@ -144,7 +162,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LP8-wW-Nmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293.5" y="1111.5"/>
+            <point key="canvasLocation" x="156.5" y="1131.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hGx-HK-kzp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sGr-ez-LOd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EuT-S4-xB1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yq4-3w-SYR" kind="relationship" relationship="rootViewController" id="UYP-0A-FJy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0c-ID-ZcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529.5" y="283.5"/>
         </scene>
     </scenes>
 </document>
