@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe22.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-uW-Acy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5za-eU-SPe">
                                 <rect key="frame" x="157" y="545" width="60" height="30"/>
                                 <state key="normal" title="登録一覧"/>
@@ -24,9 +27,6 @@
                                     <segue destination="hzo-iO-tuy" kind="modal" id="W0u-OU-srL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gll-TO-TtS">
-                                <rect key="frame" x="67" y="75" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PA-bb-GLN">
                                 <rect key="frame" x="142" y="424" width="90" height="30"/>
                                 <state key="normal" title="カフェを登録"/>
@@ -34,6 +34,9 @@
                                     <segue destination="sGr-ez-LOd" kind="modal" id="oCG-IZ-NQi"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gll-TO-TtS">
+                                <rect key="frame" x="54" y="75" width="266" height="223"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -41,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.066666666666666" y="290.15333333333331"/>
+            <point key="canvasLocation" x="20.5" y="289.5"/>
         </scene>
         <!--登録一覧-->
         <scene sceneID="fGZ-oy-XMc">
@@ -183,4 +186,7 @@
             <point key="canvasLocation" x="529.5" y="283.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cafe22.jpg" width="2461" height="3648"/>
+    </resources>
 </document>
