@@ -2,22 +2,44 @@
 //  ListTableViewController.swift
 //  cafeapp
 //
-//  Created by 花田奈々 on 2016/02/16.
+//  Created by 花田奈々 on 2016/02/21.
 //  Copyright © 2016年 com.litech. All rights reserved.
 //
 
 import UIKit
 
 class ListTableViewController: UITableViewController {
-        
+    
+    //画像・店舗名配列の宣言
+    var imgArray: [AnyObject] = []
+    var titleArray: [AnyObject] = []
+    
+    let saveData = NSUserDefaults.standardUserDefaults()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    //保存したらリストへ表示？
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if saveData.arrayForKey("IMAGE") != nil{
+            imgArray = saveData.arrayForKey("IMAGE")!
+        }
+        tableView.reloadData()
+        
+        if saveData.arrayForKey("WORD") != nil{
+            titleArray = saveData.arrayForKey("WORD")!
+            tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +58,7 @@ class ListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -91,5 +114,5 @@ class ListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

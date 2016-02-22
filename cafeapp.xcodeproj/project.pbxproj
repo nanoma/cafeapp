@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D669D671C79DE0C005711EA /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669D661C79DE0C005711EA /* ListTableViewController.swift */; };
+		4D669D6A1C79DE4C005711EA /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669D681C79DE4C005711EA /* ListTableViewCell.swift */; };
+		4D669D6B1C79DE4C005711EA /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D669D691C79DE4C005711EA /* ListTableViewCell.xib */; };
+		4D669DA81C7B3F80005711EA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669DA71C7B3F80005711EA /* Cafe.swift */; };
 		4D9830121C7843B600C4AC91 /* cafe22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9830101C7843B600C4AC91 /* cafe22.jpg */; };
 		4D9830131C7843B600C4AC91 /* cafe_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9830111C7843B600C4AC91 /* cafe_back.jpg */; };
 		4DFB43C41C72BE9600D5F725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43C31C72BE9600D5F725 /* AppDelegate.swift */; };
@@ -16,8 +20,6 @@
 		4DFB43CE1C72BE9600D5F725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFB43CC1C72BE9600D5F725 /* LaunchScreen.storyboard */; };
 		4DFB43D91C72BE9600D5F725 /* cafeappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43D81C72BE9600D5F725 /* cafeappTests.swift */; };
 		4DFB43E41C72BE9600D5F725 /* cafeappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43E31C72BE9600D5F725 /* cafeappUITests.swift */; };
-		4DFB43F71C72CCCE00D5F725 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB43F51C72CCCE00D5F725 /* ListTableViewController.swift */; };
-		4DFB43F81C72CCCE00D5F725 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFB43F61C72CCCE00D5F725 /* ListTableViewController.xib */; };
 		4DFB44611C78222400D5F725 /* TorokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB44601C78222400D5F725 /* TorokuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D669D661C79DE0C005711EA /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		4D669D681C79DE4C005711EA /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		4D669D691C79DE4C005711EA /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		4D669DA71C7B3F80005711EA /* Cafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cafe.swift; path = Model/Cafe.swift; sourceTree = "<group>"; };
 		4D9830101C7843B600C4AC91 /* cafe22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cafe22.jpg; sourceTree = "<group>"; };
 		4D9830111C7843B600C4AC91 /* cafe_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cafe_back.jpg; sourceTree = "<group>"; };
 		4DFB43C01C72BE9600D5F725 /* cafeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cafeapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,8 +60,6 @@
 		4DFB43DF1C72BE9600D5F725 /* cafeappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cafeappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFB43E31C72BE9600D5F725 /* cafeappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafeappUITests.swift; sourceTree = "<group>"; };
 		4DFB43E51C72BE9600D5F725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DFB43F51C72CCCE00D5F725 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		4DFB43F61C72CCCE00D5F725 /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
 		4DFB44601C78222400D5F725 /* TorokuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorokuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D669DA61C7B3F55005711EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D669DA71C7B3F80005711EA /* Cafe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4D98300F1C7843B600C4AC91 /* cafeimage */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,12 +128,14 @@
 		4DFB43C21C72BE9600D5F725 /* cafeapp */ = {
 			isa = PBXGroup;
 			children = (
+				4D669DA61C7B3F55005711EA /* Model */,
 				4D98300F1C7843B600C4AC91 /* cafeimage */,
 				4DFB43C31C72BE9600D5F725 /* AppDelegate.swift */,
 				4DFB43C51C72BE9600D5F725 /* ViewController.swift */,
 				4DFB44601C78222400D5F725 /* TorokuViewController.swift */,
-				4DFB43F51C72CCCE00D5F725 /* ListTableViewController.swift */,
-				4DFB43F61C72CCCE00D5F725 /* ListTableViewController.xib */,
+				4D669D661C79DE0C005711EA /* ListTableViewController.swift */,
+				4D669D681C79DE4C005711EA /* ListTableViewCell.swift */,
+				4D669D691C79DE4C005711EA /* ListTableViewCell.xib */,
 				4DFB43C71C72BE9600D5F725 /* Main.storyboard */,
 				4DFB43CA1C72BE9600D5F725 /* Assets.xcassets */,
 				4DFB43CC1C72BE9600D5F725 /* LaunchScreen.storyboard */,
@@ -253,9 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFB43CE1C72BE9600D5F725 /* LaunchScreen.storyboard in Resources */,
+				4D669D6B1C79DE4C005711EA /* ListTableViewCell.xib in Resources */,
 				4DFB43CB1C72BE9600D5F725 /* Assets.xcassets in Resources */,
 				4DFB43C91C72BE9600D5F725 /* Main.storyboard in Resources */,
-				4DFB43F81C72CCCE00D5F725 /* ListTableViewController.xib in Resources */,
 				4D9830121C7843B600C4AC91 /* cafe22.jpg in Resources */,
 				4D9830131C7843B600C4AC91 /* cafe_back.jpg in Resources */,
 			);
@@ -284,8 +298,10 @@
 			files = (
 				4DFB44611C78222400D5F725 /* TorokuViewController.swift in Sources */,
 				4DFB43C61C72BE9600D5F725 /* ViewController.swift in Sources */,
+				4D669DA81C7B3F80005711EA /* Cafe.swift in Sources */,
 				4DFB43C41C72BE9600D5F725 /* AppDelegate.swift in Sources */,
-				4DFB43F71C72CCCE00D5F725 /* ListTableViewController.swift in Sources */,
+				4D669D671C79DE0C005711EA /* ListTableViewController.swift in Sources */,
+				4D669D6A1C79DE4C005711EA /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,10 +12,54 @@ import Social
 class TorokuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var cafeImageView: UIImageView!
+    
+    var imgArray: [AnyObject] = []
+    var titileArray: [AnyObject] = []
+    var cafe = Cafe()
+    
+    let saveData = NSUserDefaults.standardUserDefaults()
+    
+    //イメージ画像の配列を格納？
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var cafeList = NSUserDefaults.standardUserDefaults().objectForKey("cafeList")
+        
+        if let cafeListData = NSUserDefaults.standardUserDefaults().objectForKey("cafeList") as? NSData {
+            print("success")
+            if let cafeList = NSKeyedUnarchiver.unarchiveObjectWithData(cafeListData) as? [Cafe] {
+                print(cafeList)
+                
+                let cafe3 = Cafe()
+                cafe3.location = "location Sapporo"
+                
+                cafeList.append(cafe3)
+                
+                let cafeListData = NSKeyedArchiver.archivedDataWithRootObject(cafeList)
+                
+                NSUserDefaults.standardUserDefaults().setObject(cafeListData, forKey: "cafeList")
 
+            }
+        }else{
+            print("error")
+        }
+        
+        let cafe1 = Cafe()
+        cafe1.location = "location"
+        
+        let cafe2 = Cafe()
+        cafe2.memo = "memo"
+        
+        let cafeList2 = [cafe1,cafe2]
+        let cafeListData = NSKeyedArchiver.archivedDataWithRootObject(cafeList2)
+        
+        NSUserDefaults.standardUserDefaults().setObject(cafeListData, forKey: "cafeList")
+        
+        
+        if let cafeList = NSUserDefaults.standardUserDefaults().objectForKey("cafeList") as? [Cafe] {
+            print("success2")
+        }
         // Do any additional setup after loading the view. 
     }
     
@@ -35,6 +79,7 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         self.dismissViewControllerAnimated(true, completion: nil)
         //画像を出力
         cafeImageView.image = image
+
     }
     
     //カメラ呼び出しボタン
@@ -66,6 +111,13 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         presentViewController(alertController, animated: true, completion: nil)
 
     }
+    
+    //配列の指定 //
+    
+  
+    
+    
+    
 
 
 
