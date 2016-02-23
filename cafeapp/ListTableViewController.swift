@@ -18,7 +18,7 @@ class ListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //TableCelを使えるようにする
         tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         // Uncomment the following line to preserve selection between presentations
@@ -41,6 +41,17 @@ class ListTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    
+    
+    
+    /*戻る
+    
+    @IBAction func exitTo(segue: UIStoryboardSegue) {
+        if (segue.identifier == "back") {
+        }
+        
+    }
+    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

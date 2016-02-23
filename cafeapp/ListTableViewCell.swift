@@ -11,7 +11,7 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var shopImageView: UIImageView!
-    @IBOutlet var shopLabel: UILabel!
+    @IBOutlet var nameLavel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
