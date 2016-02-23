@@ -191,16 +191,28 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //配列の保存？
     @IBAction func savePage(){
-        nameArray.append(nameTextField.text!) //配列の指定 !はnilを避けるためにある
+        nameArray.append(nameTextField.text!) //配列の指定 !はnilを避けるため
         imgArray.append(cafeImageView.image!)
         locationArray.append(locationTextField.text!)
         
-        saveData.setObject(name, forKey: "name") //nameのキーにnameを保存
-        saveData.setObject(location, forKey: "location")
-        saveData.setObject(memo, forKey: "memo")
-        saveData.setObject(cafeImageView.image, forKey: "imageview") 
+        saveData.setObject(nameArray, forKey: "name") //nameのキーにnameを保存
+        saveData.setObject(locationArray, forKey: "location")
+        saveData.setObject(memoArray, forKey: "memo")
+        saveData.setObject(imgArray, forKey: "imageview")
+        
+        saveData.synchronize()
+        
+        self.performSegueWithIdentifier("toListView", sender: nil) //登録一覧へ遷移 ←落ちる
         
         }
+    
+    /* Segue 準備
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toListView") {
+            let listView: ListTableViewController = (segue.destinationViewController as? ListTableViewController)!
+        }
+    }
+    */
     
 
 
@@ -208,7 +220,6 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
 

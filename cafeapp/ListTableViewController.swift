@@ -45,7 +45,9 @@ class ListTableViewController: UITableViewController {
         
         if saveData.arrayForKey("name") != nil{
             nameArray = saveData.arrayForKey("name")!
+            
             tableView.reloadData()
+        
         }
         
         tableView.reloadData()
@@ -81,6 +83,17 @@ class ListTableViewController: UITableViewController {
         return cell
     }
     
+    //セルから詳細ページへ移動
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("toSyousaiView", sender: nil)
+    }
+    
+    //選択したセルから中身を引き出す？？
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        var secondViewController:SyousaiViewController = segue.destinationViewController as! SyousaiViewController
+
+    }
 
     
 
