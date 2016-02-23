@@ -88,6 +88,7 @@
                         <barButtonItem key="leftBarButtonItem" title="TOPへ" id="PWD-Zv-TAl">
                             <connections>
                                 <action selector="exitTo:" destination="Y7g-bU-3Hm" id="HS2-eG-eAs"/>
+                                <segue destination="YCl-PF-9WO" kind="unwind" unwindAction="back:" id="mka-aM-YaD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,6 +98,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5h-OP-ufL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YCl-PF-9WO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1181.5" y="1145.5"/>
         </scene>
@@ -148,7 +150,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PZJ-4M-ElG"/>
+                    <navigationItem key="navigationItem" id="PZJ-4M-ElG">
+                        <barButtonItem key="leftBarButtonItem" title="TOPへ" id="NMf-Eg-kIs">
+                            <connections>
+                                <segue destination="OpQ-yp-fas" kind="unwind" unwindAction="back:" id="tLp-gp-2kY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cafeImageView" destination="YyW-Mr-27J" id="Fj0-hF-UuP"/>
@@ -158,6 +166,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gip-MX-vnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OpQ-yp-fas" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1699.5" y="1131.5"/>
         </scene>
@@ -227,7 +236,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="新規登録" id="pzk-O0-Ttq">
-                        <barButtonItem key="leftBarButtonItem" title="TOPへ" id="QaQ-xL-Ysp"/>
+                        <barButtonItem key="leftBarButtonItem" title="TOPへ" id="QaQ-xL-Ysp">
+                            <connections>
+                                <segue destination="yyV-WE-c72" kind="unwind" unwindAction="back:" id="hLK-Xb-Buq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="save" id="fok-AN-MNO">
                             <connections>
                                 <action selector="savePage" destination="yq4-3w-SYR" id="pGH-MA-PVz"/>
@@ -244,6 +257,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrX-gB-bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yyV-WE-c72" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1107.5" y="289.5"/>
         </scene>

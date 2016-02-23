@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    //Finishからスタート画面にもどるメソッド
+    @IBAction func back (segue: UIStoryboardSegue) {
+        
+    }
+    
 
 }
 

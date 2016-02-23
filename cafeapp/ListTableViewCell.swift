@@ -9,8 +9,7 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-    
-    @IBOutlet var shopImageView: UIImageView!
+
     @IBOutlet var nameLavel: UILabel!
 
     override func awakeFromNib() {

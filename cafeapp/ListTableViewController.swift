@@ -10,7 +10,7 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    //画像・店舗名配列の宣言
+    //画像・店舗名等配列の宣言
     
     var imgArray: [AnyObject] = []
     var nameArray: [AnyObject] = []
@@ -27,7 +27,7 @@ class ListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TableCelを使えるようにする
+        //TableCellを使えるようにする
         tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         // Uncomment the following line to preserve selection between presentations
@@ -47,24 +47,55 @@ class ListTableViewController: UITableViewController {
             nameArray = saveData.arrayForKey("name")!
             tableView.reloadData()
         }
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    
+    
     // MARK: - Table view data source
-
+    
+    //セクションの数を指定
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //セルの個数を指定
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nameArray.count
+    }
+    
+    //セルの中身の表示を設定
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
+        
+        let nowIndexPathDictionaly: (AnyObject) = nameArray[indexPath.row]
+        
+        cell.nameLavel.text = nowIndexPathDictionaly["name"] as? String
+        return cell
+    }
+    
+
+    
+
+    /* override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
+    */
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    /*override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+*/
     
 
     /*

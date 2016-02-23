@@ -133,7 +133,7 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     //SNSへの投稿
     func postToSNS(serviceType: String){
         let myComposeView = SLComposeViewController(forServiceType: serviceType)
-        myComposeView.setInitialText("cafememoからの投稿")
+        myComposeView.setInitialText("#カフェめも")
         //投稿する画像を指定
         
         //投稿するコメントを指定
@@ -198,20 +198,11 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         saveData.setObject(name, forKey: "name") //nameのキーにnameを保存
         saveData.setObject(location, forKey: "location")
         saveData.setObject(memo, forKey: "memo")
-        saveData.setObject(cafeImageView.image, forKey: "imageview") //NS型に変換という説もあり？
+        saveData.setObject(cafeImageView.image, forKey: "imageview") 
         
         }
     
 
-
-    
-    /*戻る
-    @IBAction func exitTo(segue: UIStoryboardSegue) {
-        if (segue.identifier == "back") {
-        }
-        
-    }
-    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
