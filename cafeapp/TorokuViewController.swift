@@ -9,7 +9,7 @@
 import UIKit
 import Social
 
-class TorokuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class TorokuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet var cafeImageView: UIImageView!
     
@@ -17,16 +17,28 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     var nameArray: [AnyObject] = []
     var locationArray: [AnyObject] = []
     var memoArray: [AnyObject] = []
+    
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var memoTextField: UITextField!
+    
+    var name: String = ""
+    var location: String = ""
+    var memo: String = ""
+    
+    
     var cafe = Cafe()
+
     
     var selectedImage: UIImage?
     
     
-    let saveData = NSUserDefaults.standardUserDefaults()
+    let saveData = NSUserDefaults.standardUserDefaults() //画像・テキストを保存するため
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var cafeList = NSUserDefaults.standardUserDefaults().objectForKey("cafeList")
         
         /*データを保存
@@ -177,14 +189,21 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     
-    /*配列の保存？？？
+    //配列の保存？
     @IBAction func savePage(){
-        let shopList = [[UIimage], "name":nameTextField.text, "location":locationTextField.text, ]
+        nameArray.append(nameTextField.text!) //配列の指定 !はnilを避けるためにある
+        imgArray.append(cafeImageView.image!)
+        locationArray.append(locationTextField.text!)
+        
+        saveData.setObject(name, forKey: "name") //nameのキーにnameを保存
+        saveData.setObject(location, forKey: "location")
+        saveData.setObject(memo, forKey: "memo")
+        saveData.setObject(cafeImageView.image, forKey: "imageview") //NS型に変換という説もあり？
         
         }
-    */
     
-    
+
+
     
     /*戻る
     @IBAction func exitTo(segue: UIStoryboardSegue) {
@@ -193,13 +212,13 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     */
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     /*

@@ -13,15 +13,38 @@ class SyousaiViewController: UIViewController {
     @IBOutlet weak var cafeImageView: UIImageView!
     var selectedImg: UIImage!
     
+    var imgArray: [AnyObject] = []
+    var nameArray: [AnyObject] = []
+    var locationArray: [AnyObject] = []
+    var memoArray: [AnyObject] = []
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var memoTextField: UILabel!
+    
+    let saveData = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
          //画像を取り出す
         cafeImageView.image = selectedImg
         // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
         cafeImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        */
         
+        //TorokuViewの配列を保持して取り出す
+        
+        nameArray.append(nameLabel.text!) //配列の指定 !はnilを避けるためにある
+        imgArray.append(cafeImageView.image!)
+        locationArray.append(locationLabel.text!)
+        
+        saveData.stringForKey("name") //nameのキーから呼び出し
+        saveData.stringForKey("location")
+        saveData.stringForKey("memo")
+        saveData.stringForKey("imageview")
+    
 
         // Do any additional setup after loading the view.
     }

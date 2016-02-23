@@ -11,8 +11,17 @@ import UIKit
 class ListTableViewController: UITableViewController {
     
     //画像・店舗名配列の宣言
+    
     var imgArray: [AnyObject] = []
-    var titleArray: [AnyObject] = []
+    var nameArray: [AnyObject] = []
+    var locationArray: [AnyObject] = []
+    var memoArray: [AnyObject] = []
+    
+    
+    var name: String = ""
+    var location: String = ""
+    var memo: String = ""
+    
     
     let saveData = NSUserDefaults.standardUserDefaults()
 
@@ -28,30 +37,17 @@ class ListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    //保存したらリストへ表示？
+    
+    
+    //保存したら店名（name）をリストに読み込む
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if saveData.arrayForKey("IMAGE") != nil{
-            imgArray = saveData.arrayForKey("IMAGE")!
-        }
-        tableView.reloadData()
         
-        if saveData.arrayForKey("WORD") != nil{
-            titleArray = saveData.arrayForKey("WORD")!
+        if saveData.arrayForKey("name") != nil{
+            nameArray = saveData.arrayForKey("name")!
             tableView.reloadData()
         }
     }
-    
-    
-    
-    /*戻る
-    
-    @IBAction func exitTo(segue: UIStoryboardSegue) {
-        if (segue.identifier == "back") {
-        }
-        
-    }
-    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

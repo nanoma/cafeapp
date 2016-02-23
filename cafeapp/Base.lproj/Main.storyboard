@@ -98,7 +98,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5h-OP-ufL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134.5" y="1131.5"/>
+            <point key="canvasLocation" x="1181.5" y="1145.5"/>
         </scene>
         <!--Syousai View Controller-->
         <scene sceneID="Ymf-EO-txt">
@@ -116,31 +116,31 @@
                                 <rect key="frame" x="0.0" y="105" width="375" height="290"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roK-al-TER">
-                                <rect key="frame" x="44" y="369" width="34" height="21"/>
+                                <rect key="frame" x="34" y="412" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS4-z6-vML">
-                                <rect key="frame" x="44" y="412" width="267" height="21"/>
+                                <rect key="frame" x="54" y="451" width="267" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXj-Vd-rFk">
-                                <rect key="frame" x="52" y="489" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-gM-kfF">
-                                <rect key="frame" x="34" y="542" width="311" height="21"/>
+                                <rect key="frame" x="34" y="513" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsZ-Jb-0dt">
                                 <rect key="frame" x="166" y="64" width="42" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-gM-kfF">
+                                <rect key="frame" x="34" y="573" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -152,11 +152,14 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cafeImageView" destination="YyW-Mr-27J" id="Fj0-hF-UuP"/>
+                        <outlet property="locationLabel" destination="gS4-z6-vML" id="0cq-gL-svN"/>
+                        <outlet property="memoTextField" destination="hf9-gM-kfF" id="0od-gE-0gB"/>
+                        <outlet property="nameLabel" destination="FsZ-Jb-0dt" id="CQ6-ZD-MbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gip-MX-vnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609.5" y="1131.5"/>
+            <point key="canvasLocation" x="1699.5" y="1131.5"/>
         </scene>
         <!--新規登録-->
         <scene sceneID="xmQ-o1-hAc">
@@ -183,7 +186,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMo-8N-PDH">
-                                <rect key="frame" x="8" y="410" width="34" height="21"/>
+                                <rect key="frame" x="8" y="404" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -227,6 +230,7 @@
                         <barButtonItem key="leftBarButtonItem" title="TOPへ" id="QaQ-xL-Ysp"/>
                         <barButtonItem key="rightBarButtonItem" title="save" id="fok-AN-MNO">
                             <connections>
+                                <action selector="savePage" destination="yq4-3w-SYR" id="pGH-MA-PVz"/>
                                 <segue destination="Y7g-bU-3Hm" kind="push" id="wq1-85-vLs"/>
                             </connections>
                         </barButtonItem>
@@ -234,11 +238,14 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cafeImageView" destination="HJU-dY-GKO" id="hpY-Ce-iPc"/>
+                        <outlet property="locationTextField" destination="wOI-F2-eT2" id="Yt3-jQ-lDI"/>
+                        <outlet property="memoTextField" destination="dq3-G2-o2X" id="goi-f7-56r"/>
+                        <outlet property="nameTextField" destination="UBy-JP-HeH" id="akg-lQ-Xxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrX-gB-bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026.5" y="289.5"/>
+            <point key="canvasLocation" x="1107.5" y="289.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5tk-MB-6ac">
