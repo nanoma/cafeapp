@@ -22,6 +22,9 @@ class ListTableViewController: UITableViewController {
     var location: String = ""
     var memo: String = ""
     
+    var selectedImage: UIImage?
+    
+    
     
     let saveData = NSUserDefaults.standardUserDefaults()
 
@@ -83,19 +86,36 @@ class ListTableViewController: UITableViewController {
         return cell
     }
     
-    //セルから詳細ページへ移動
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    // Cell が選択された場合
+    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         
-        self.performSegueWithIdentifier("toSyousaiView", sender: nil)
+        // [indexPath.row] から画像名を探し、UImage を設定
+        selectedImage = UIImage(named:"\(imgArray[indexPath.row])")
+        
+        //[indexPath.row] からnameを探し、UILabel を設定
+        
+        //[indexPath.row] からlocationを探し、UILabel を設定
+        
+        //[indexPath.row] からmemoを探し、UILabel を設定
+        
+        if selectedImage != nil {
+            // SyousaiViewController へ遷移するために Segue を呼び出す
+            performSegueWithIdentifier("toSyousaiView",sender: nil)
+        }
+        
     }
     
-    //選択したセルから中身を引き出す？？
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
-        var secondViewController:SyousaiViewController = segue.destinationViewController as! SyousaiViewController
-
+    // Segue 準備
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toSyousaiView") {
+            let subVC: SyousaiViewController = (segue.destinationViewController as? SyousaiViewController)!
+            // SubViewController のselectedImgに選択された画像を設定する
+            subVC.selectedImg = selectedImage
+            
+        }
     }
 
-    
+
 
     /* override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
