@@ -23,7 +23,7 @@ class ListTableViewController: UITableViewController {
     var memo: String = ""
     
     var selectedImage: UIImage?
-    
+    var selectedLabel: UILabel!
     
     
     let saveData = NSUserDefaults.standardUserDefaults()
@@ -41,17 +41,41 @@ class ListTableViewController: UITableViewController {
     }
     
     
+    //NSDataをUIImageに変換する
+    func StringImage(imageString:NSData) -> UIImage?{
+        
+        //NSDataからUIImageを生成？？
+        let img = UIImage(data: imageString)
+        
+        //結果を返却
+        return img
+    }
     
-    //保存したら店名（name）をリストに読み込む
+    //保存したらNSUserDefaultsからリストに読み込む
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         if saveData.arrayForKey("name") != nil{
             nameArray = saveData.arrayForKey("name")!
-            
-            tableView.reloadData()
-        
+            print("\(nameArray.count)")
         }
+        
+        if saveData.arrayForKey("location") != nil{
+            locationArray = saveData.arrayForKey("location")!
+            print("\(locationArray.count)")
+            
+        }
+        
+        if saveData.arrayForKey("memo") != nil{
+            memoArray = saveData.arrayForKey("memo")!
+            print("\(memoArray.count)")
+        }
+        
+        if saveData.arrayForKey("img") != nil{
+            imgArray = saveData.arrayForKey("img")!
+            print("\(imgArray.count)")
+        }
+        
         
         tableView.reloadData()
     }
@@ -80,9 +104,9 @@ class ListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         
-        let nowIndexPathDictionaly: (AnyObject) = nameArray[indexPath.row]
+//        let nowIndexPathDictionaly: (AnyObject) = nameArray[indexPath.row]
         
-        cell.nameLavel.text = nowIndexPathDictionaly["name"] as? String
+        cell.nameLavel.text = nameArray[indexPath.row] as? String
         return cell
     }
     
@@ -90,13 +114,22 @@ class ListTableViewController: UITableViewController {
     override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         
         // [indexPath.row] から画像名を探し、UImage を設定
+        
         selectedImage = UIImage(named:"\(imgArray[indexPath.row])")
         
         //[indexPath.row] からnameを探し、UILabel を設定
         
+        selectedLabel = UILabel(named:"\(nameArray[indexPath.row])")
+        
         //[indexPath.row] からlocationを探し、UILabel を設定
         
+        selectedLabel = UILabel(named:"\(locationArray[indexPath.row])")
+
+        
         //[indexPath.row] からmemoを探し、UILabel を設定
+        
+        selectedLabel = UILabel(named:"\(nameArray[indexPath.row])")
+
         
         if selectedImage != nil {
             // SyousaiViewController へ遷移するために Segue を呼び出す
@@ -109,7 +142,7 @@ class ListTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "toSyousaiView") {
             let subVC: SyousaiViewController = (segue.destinationViewController as? SyousaiViewController)!
-            // SubViewController のselectedImgに選択された画像を設定する
+            // SyousaiViewController のselectedImgに選択された画像を設定する
             subVC.selectedImg = selectedImage
             
         }

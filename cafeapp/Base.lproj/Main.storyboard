@@ -100,7 +100,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5h-OP-ufL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YCl-PF-9WO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1214.5" y="1139.5"/>
+            <point key="canvasLocation" x="1469.5" y="827.5"/>
         </scene>
         <!--Syousai View Controller-->
         <scene sceneID="Ymf-EO-txt">
@@ -253,7 +253,7 @@
                         <outlet property="locationTextField" destination="wOI-F2-eT2" id="Yt3-jQ-lDI"/>
                         <outlet property="memoTextField" destination="dq3-G2-o2X" id="goi-f7-56r"/>
                         <outlet property="nameTextField" destination="UBy-JP-HeH" id="akg-lQ-Xxq"/>
-                        <segue destination="Y7g-bU-3Hm" kind="push" identifier="toListView" id="jje-D5-pJF"/>
+                        <segue destination="Y7g-bU-3Hm" kind="push" identifier="toListView" id="86m-Ph-zry"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrX-gB-bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,6 +303,6 @@
         <image name="cafe22.jpg" width="2461" height="3648"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jje-D5-pJF"/>
+        <segue reference="86m-Ph-zry"/>
     </inferredMetricsTieBreakers>
 </document>

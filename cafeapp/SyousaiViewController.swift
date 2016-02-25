@@ -49,28 +49,14 @@ class SyousaiViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //StringをUIImageに変換する
-    func StringImage(imageString:String) -> UIImage?{
-        
-        //空白を+に変換する
-        var base64String = imageString.stringByReplacingOccurrencesOfString(" ", withString:"+",options: nil, range:nil)
-        
-        //BASE64の文字列をデコードしてNSDataを生成
-        let decodeBase64:NSData? =
-        NSData(base64EncodedString:base64String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-        
-        //NSDataの生成が成功していたら
-        if let decodeSuccess = decodeBase64 {
-            
-            //NSDataからUIImageを生成
-            let img = UIImage(data: decodeSuccess)
+    //NSDataをUIImageに変換する
+    func StringImage(imageString:NSData) -> UIImage?{
+    
+            //NSDataからUIImageを生成？？
+            let img = UIImage(data: imageString)
             
             //結果を返却
             return img
-        }
-        
-        return nil
-        
     }
 
     override func didReceiveMemoryWarning() {

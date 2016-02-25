@@ -188,38 +188,31 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     
-    //UIImageをNSDataに変換
-    func ImageString(image:UIImage) -> String? {
+     //UIImageをNSDataに変換
     
-    //画像をNSDataに変換
-    let data:NSData = UIImagePNGRepresentation(image)!
+    func ImageString(image:UIImage) -> NSData {
     
-    //NSDataへの変換が成功していたら
-    if let pngData = data {
-    
-    //BASE64のStringに変換する
-    let encodeString:String =
-    pngData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-    
-    return encodeString
+        let data:NSData = UIImagePNGRepresentation(image)!
+
+    return data
     
     }
+   
     
-    return nil
-    
-    }
-    
-    
+
     //配列の保存
     @IBAction func savePage(){
+        
         nameArray.append(nameTextField.text!) //配列の指定 !はnilを避けるため
-        imgArray.append(cafeImageView.image!)
+        imgArray.append(self.ImageString(cafeImageView.image!))
         locationArray.append(locationTextField.text!)
         
         saveData.setObject(nameArray, forKey: "name") //nameのキーにnameを保存
         saveData.setObject(locationArray, forKey: "location")
         saveData.setObject(memoArray, forKey: "memo")
         saveData.setObject(imgArray, forKey: "imageview")
+        
+        self.ImageString(cafeImageView.image!)
         
         saveData.synchronize()
         
