@@ -23,7 +23,11 @@ class ListTableViewController: UITableViewController {
     var memo: String = ""
     
     var selectedImage: UIImage?
-    var selectedLabel: UILabel!
+    var selectedLabel1: String!
+    var selectedLabel2: String!
+    var selectedLabel3: String!
+    
+    var nameIndex: Int = 0
     
     
     let saveData = NSUserDefaults.standardUserDefaults()
@@ -40,17 +44,7 @@ class ListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    
-    //NSDataをUIImageに変換する
-    func StringImage(imageString:NSData) -> UIImage?{
-        
-        //NSDataからUIImageを生成？？
-        let img = UIImage(data: imageString)
-        
-        //結果を返却
-        return img
-    }
-    
+
     //保存したらNSUserDefaultsからリストに読み込む
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -71,14 +65,25 @@ class ListTableViewController: UITableViewController {
             print("\(memoArray.count)")
         }
         
-        if saveData.arrayForKey("img") != nil{
-            imgArray = saveData.arrayForKey("img")!
+        if saveData.arrayForKey("imageview") != nil{
+            imgArray = saveData.arrayForKey("imageview")!
             print("\(imgArray.count)")
         }
         
         
         tableView.reloadData()
     }
+    
+    //NSDataをUIImageに変換する（ここで必要？）
+    func StringImage(imageString:NSData) -> UIImage?{
+        
+        //NSDataからUIImageを生成？？
+        let img = UIImage(data: imageString)
+        
+        //結果を返却
+        return img
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,44 +111,77 @@ class ListTableViewController: UITableViewController {
         
 //        let nowIndexPathDictionaly: (AnyObject) = nameArray[indexPath.row]
         
-        cell.nameLavel.text = nameArray[indexPath.row] as? String
-        return cell
+        //nameArrayの配列をnameラベルに表示
+        cell.nameLabel.text = nameArray[indexPath.row] as? String
+        return cell //戻り値
+        
     }
     
-    // Cell が選択された場合
-    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+    
+//    
+//    // Cell が選択された場合
+//    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+//        
+//        // [indexPath.row] から画像名を探し、UImage を設定
+//        
+//        selectedImage =  UIImage (named:"\(imgArray[indexPath.row])")
+//        
+//        //[indexPath.row] からnameを探し、UILabel を設定
+//        
+//        selectedLabel1 = nameArray[indexPath.row] as! String
+//        
+//        
+//        //[indexPath.row] からlocationを探し、UILabel を設定
+//        
+//        selectedLabel2 = locationArray[indexPath.row] as! String
+//
+//        
+//        //[indexPath.row] からmemoを探し、UILabel を設定
+//        
+//        selectedLabel2 = locationArray[indexPath.row] as! String
+//        
+//        /*
+//        selectedLabel = UILabel(named:"\(memoArray[indexPath.row])")
+//        */
+//        
+//        if selectedImage != nil {
+//            // SyousaiViewController へ遷移するために Segue を呼び出す
+//            performSegueWithIdentifier("toSyousaiView",sender: nil)
+//        }
+//        
+//        if selectedLabel1 != nil {
+//            // SyousaiViewController へ遷移するために Segue を呼び出す
+//            performSegueWithIdentifier("toSyousaiView",sender: nil)
+//        }
+//        
+//        if selectedLabel2 != nil {
+//            // SyousaiViewController へ遷移するために Segue を呼び出す
+//            performSegueWithIdentifier("toSyousaiView",sender: nil)
+//        }
+//        
+//        if selectedLabel3 != nil {
+//            // SyousaiViewController へ遷移するために Segue を呼び出す
+//            performSegueWithIdentifier("toSyousaiView",sender: nil)
+//        }
+//        
+//    }
+//    
+       override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+            nameIndex = indexPath.row //代入　indexPath.rowがセルについてる数字
+            self.performSegueWithIdentifier("toSyousaiView", sender: nil)
         
-        // [indexPath.row] から画像名を探し、UImage を設定
-        
-        selectedImage = UIImage(named:"\(imgArray[indexPath.row])")
-        
-        //[indexPath.row] からnameを探し、UILabel を設定
-        
-        selectedLabel = UILabel(named:"\(nameArray[indexPath.row])")
-        
-        //[indexPath.row] からlocationを探し、UILabel を設定
-        
-        selectedLabel = UILabel(named:"\(locationArray[indexPath.row])")
-
-        
-        //[indexPath.row] からmemoを探し、UILabel を設定
-        
-        selectedLabel = UILabel(named:"\(nameArray[indexPath.row])")
-
-        
-        if selectedImage != nil {
-            // SyousaiViewController へ遷移するために Segue を呼び出す
-            performSegueWithIdentifier("toSyousaiView",sender: nil)
-        }
         
     }
     
     // Segue 準備
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "toSyousaiView") {
+            
+            
             let subVC: SyousaiViewController = (segue.destinationViewController as? SyousaiViewController)!
             // SyousaiViewController のselectedImgに選択された画像を設定する
-            subVC.selectedImg = selectedImage
+            subVC.selectedImg = nameIndex
             
         }
     }

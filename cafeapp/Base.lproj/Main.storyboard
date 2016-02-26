@@ -20,29 +20,28 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe22.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-uW-Acy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PA-bb-GLN">
-                                <rect key="frame" x="142" y="424" width="90" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69000000000000006" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="カフェを登録">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PA-bb-GLN">
+                                <rect key="frame" x="86" y="440" width="202" height="69"/>
+                                <state key="normal" title="カフェを登録" image="torokubutton.png">
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="sGr-ez-LOd" kind="modal" identifier="back" id="oCG-IZ-NQi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gll-TO-TtS">
-                                <rect key="frame" x="54" y="75" width="266" height="223"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5za-eU-SPe">
-                                <rect key="frame" x="157" y="530" width="60" height="30"/>
+                                <rect key="frame" x="140" y="559" width="94" height="46"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.81000000000000005" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="登録一覧">
-                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="hzo-iO-tuy" kind="modal" identifier="" id="W0u-OU-srL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafetop_done.png" translatesAutoresizingMaskIntoConstraints="NO" id="gll-TO-TtS">
+                                <rect key="frame" x="20" y="20" width="362" height="307"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -100,7 +99,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5h-OP-ufL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YCl-PF-9WO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1469.5" y="827.5"/>
+            <point key="canvasLocation" x="1346.5" y="1136.5"/>
         </scene>
         <!--Syousai View Controller-->
         <scene sceneID="Ymf-EO-txt">
@@ -124,13 +123,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS4-z6-vML">
-                                <rect key="frame" x="54" y="451" width="267" height="21"/>
+                                <rect key="frame" x="32" y="441" width="311" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXj-Vd-rFk">
-                                <rect key="frame" x="34" y="513" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXj-Vd-rFk">
+                                <rect key="frame" x="32" y="493" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -142,11 +141,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-gM-kfF">
-                                <rect key="frame" x="34" y="573" width="311" height="21"/>
+                                <rect key="frame" x="32" y="522" width="311" height="69"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-Tk-WNa">
+                                <rect key="frame" x="123" y="623" width="141" height="44"/>
+                                <state key="normal" title="share" image="share.png"/>
+                                <connections>
+                                    <action selector="upLoadButtonTapped:" destination="CHV-m9-Qqg" eventType="touchUpInside" id="tgT-Ob-5yU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -161,14 +167,14 @@
                     <connections>
                         <outlet property="cafeImageView" destination="YyW-Mr-27J" id="Fj0-hF-UuP"/>
                         <outlet property="locationLabel" destination="gS4-z6-vML" id="0cq-gL-svN"/>
-                        <outlet property="memoTextField" destination="hf9-gM-kfF" id="0od-gE-0gB"/>
+                        <outlet property="memoLabel" destination="hf9-gM-kfF" id="OVW-56-0MW"/>
                         <outlet property="nameLabel" destination="FsZ-Jb-0dt" id="CQ6-ZD-MbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gip-MX-vnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="OpQ-yp-fas" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1667.5" y="1139.5"/>
+            <point key="canvasLocation" x="1840.5" y="1136.5"/>
         </scene>
         <!--新規登録-->
         <scene sceneID="xmQ-o1-hAc">
@@ -190,24 +196,24 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOI-F2-eT2">
-                                <rect key="frame" x="10" y="435" width="345" height="30"/>
+                                <rect key="frame" x="10" y="422" width="345" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMo-8N-PDH">
-                                <rect key="frame" x="8" y="404" width="34" height="21"/>
+                                <rect key="frame" x="8" y="392" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U1-ux-kWe">
-                                <rect key="frame" x="6" y="480" width="48" height="21"/>
+                                <rect key="frame" x="6" y="467" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-G2-o2X">
-                                <rect key="frame" x="12" y="503" width="343" height="125"/>
+                                <rect key="frame" x="12" y="495" width="343" height="125"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -224,10 +230,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GO-oC-kId">
-                                <rect key="frame" x="132" y="633" width="108" height="30"/>
-                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Share"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GO-oC-kId">
+                                <rect key="frame" x="115" y="622" width="145" height="44"/>
+                                <state key="normal" title="Share" image="share.png"/>
                                 <connections>
                                     <action selector="upLoadButtonTapped:" destination="yq4-3w-SYR" eventType="touchUpInside" id="fH5-kq-5qf"/>
                                 </connections>
@@ -301,8 +306,11 @@
     </scenes>
     <resources>
         <image name="cafe22.jpg" width="2461" height="3648"/>
+        <image name="cafetop_done.png" width="750" height="300"/>
+        <image name="share.png" width="600" height="200"/>
+        <image name="torokubutton.png" width="600" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="86m-Ph-zry"/>
+        <segue reference="Sr3-9c-ZWg"/>
     </inferredMetricsTieBreakers>
 </document>

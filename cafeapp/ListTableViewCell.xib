@@ -23,7 +23,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="nameLavel" destination="0QI-5B-Y1Q" id="6SL-gh-7z2"/>
+                <outlet property="nameLabel" destination="0QI-5B-Y1Q" id="5np-jp-D7o"/>
             </connections>
         </tableViewCell>
     </objects>
