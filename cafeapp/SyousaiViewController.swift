@@ -27,6 +27,8 @@ class SyousaiViewController: UIViewController {
     
     let saveData = NSUserDefaults.standardUserDefaults()
     
+    //save.data〜の変数を作る
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,26 +43,41 @@ class SyousaiViewController: UIViewController {
         
         
         //TorokuViewの配列を保持して取り出す
-        /*
-        nameArray.append(nameLabel.text!) //配列の指定 !はnilを避けるためにある
-        imgArray.append(cafeImageView.image!)
-        locationArray.append(locationLabel.text!)
-        memoArray.append(memoLabel.text!)
-        */
-        /*
-        saveData.stringForKey("name") //nameのキーから呼び出し
-        saveData.stringForKey("location")
-        saveData.stringForKey("memo")
-        saveData.stringForKey("imageview")
-        */
-    
-        nameLabel.text = String(saveData.arrayForKey("name"))
-        locationLabel.text = String(saveData.arrayForKey("location")) //String型として表示？ （）の中始めは変数で、NSUseDefaultsから呼び出し
+        var nameData =  saveData.arrayForKey("name")!
         
-        memoLabel.text = String(saveData.arrayForKey("memo"))
-        print(saveData.dataForKey("imageview"))
-        cafeImageView.image = UIImage(data: saveData.dataForKey("imageview")!)
+        var locationData = saveData.arrayForKey("location")! //String型として表示？ （）の中始めは変数で、NSUseDefaultsから呼び出し
+        
+        var memoData = saveData.arrayForKey("memo")!
+        
+        print("ここで落ちる", saveData.dataForKey("imageview"))
+//        cafeImageView.image = UIImage(data: saveData.dataForKey("imageview")!)
+        
+        
+        //配列の中から1つのnameラベルを取り出す
+// MARK: -  あとで修正        
+        //nameLabel.text = nameData[selectedImg]
+
     
+        //配列の中から1つのlocationラベルを取り出す
+        
+        let locationL = locationData[selectedImg]
+       
+        
+        //配列の中から1つのmemoラベルを取り出す
+       
+        let memoL = memoData[selectedImg]
+        
+        
+        var gazouData =  saveData.arrayForKey("imageview")! as! [NSData]
+        
+        // ★配列から取り出す番号を指定
+        let gazou = gazouData[selectedImg]
+        
+        //UIImageに変換
+        let gazouImg = StringImage(gazou) //UIImage
+        
+        //cafeImageViewをUIImageと宣言
+        cafeImageView.image = gazouImg
 
         // Do any additional setup after loading the view.
     }

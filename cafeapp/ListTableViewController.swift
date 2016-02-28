@@ -168,7 +168,7 @@ class ListTableViewController: UITableViewController {
 //    
        override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
-            nameIndex = indexPath.row //代入　indexPath.rowがセルについてる数字
+            nameIndex = indexPath.row //代入　indexPath.rowがセルについてる数字（何番目の配列か）
             self.performSegueWithIdentifier("toSyousaiView", sender: nil)
         
         
@@ -181,7 +181,7 @@ class ListTableViewController: UITableViewController {
             
             let subVC: SyousaiViewController = (segue.destinationViewController as? SyousaiViewController)!
             // SyousaiViewController のselectedImgに選択された画像を設定する
-            subVC.selectedImg = nameIndex
+            subVC.selectedImg = nameIndex  //何番目の配列を取り出すかがselectedImg
             
         }
     }

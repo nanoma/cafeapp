@@ -13,6 +13,7 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     
     @IBOutlet var cafeImageView: UIImageView!
     
+    //配列の中身は空ですよ
     var imgArray: [AnyObject] = []
     var nameArray: [AnyObject] = []
     var locationArray: [AnyObject] = []
@@ -206,17 +207,25 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         nameArray.append(nameTextField.text!) //配列の指定 !はnilを避けるため
         imgArray.append(self.ImageString(cafeImageView.image!))
         locationArray.append(locationTextField.text!)
+        memoArray.append(memoTextField.text!)
         
-        saveData.setObject(nameArray, forKey: "name") //nameのキーにnameを保存
+        saveData.setObject(nameArray, forKey: "name") //nameのキーにnameを保存（nameのキーに入っている一語のみを取り出している）
         saveData.setObject(locationArray, forKey: "location")
         saveData.setObject(memoArray, forKey: "memo")
         saveData.setObject(imgArray, forKey: "imageview")
+        
+        //前回保存したものを呼び出し　？？
+        nameArray = saveData.arrayForKey("name")!
+        locationArray = saveData.arrayForKey("location")!
+        memoArray = saveData.arrayForKey("memo")!
+        imgArray = saveData.arrayForKey("imageview")!
+        
         
         self.ImageString(cafeImageView.image!)
         
         saveData.synchronize()
         
-        self.performSegueWithIdentifier("toListView", sender: nil) //登録一覧へ遷移 ←落ちる
+        self.performSegueWithIdentifier("toListView", sender: nil) //登録一覧へ遷移 
         
         }
     
