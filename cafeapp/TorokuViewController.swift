@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Social //SNS機能をつける
 
 class TorokuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
@@ -83,7 +82,7 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         */
         // Do any additional setup after loading the view. 
         
-        //前回保存したものを呼び出し
+        //前回保存したものを呼び出し（リストに追加で表示できるようにする）
         if saveData.arrayForKey("name") != nil{
             nameArray = saveData.arrayForKey("name")!
             print("\(nameArray.count)")
@@ -104,6 +103,20 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
             imgArray = saveData.arrayForKey("imageview")!
             print("\(imgArray.count)")
         }
+        
+        //navigationvarの色指定
+        let naviColor = UIColor(red: 101/255, green: 186/255, blue: 164/255, alpha: 1.0)
+        
+        // 背景の色を変える
+        self.navigationController?.navigationBar.barTintColor = naviColor
+        
+        // itemボタン色指定
+        let textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
+        // ボタンの色を変える
+        self.navigationController?.navigationBar.tintColor = textColor
+
+
     }
     
     //カメラ・アルバム呼び出しメソッド
@@ -155,65 +168,6 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
 
     }
     
-    //SNSへの投稿
-    func postToSNS(serviceType: String){
-        let myComposeView = SLComposeViewController(forServiceType: serviceType)
-        myComposeView.setInitialText("#カフェめも")
-        //投稿する画像を指定
-        
-        //投稿するコメントを指定
-        myComposeView.addImage(cafeImageView.image)
-        
-        //myComposeViewの画面遷移
-        self.presentViewController(myComposeView, animated: true, completion: nil)
-        
-    }
-    
-    //任意のメッセージとOKボタンを持つアラートのメソッド
-    func simpleAlert(titleString: String){
-        
-        let alertController = UIAlertController(title: titleString, message: nil, preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-        
-    }
- 
-    
-    //アップロード時に呼ばれるメソッド
-    @IBAction func upLoadButtonTapped(sender: UIButton){
-        
-        //画像を使用してない時に出現？
-        guard let selectedPhoto = cafeImageView.image else{
-            simpleAlert("画像がありません")
-            return
-        }
-    
-        
-        
-        let alertController = UIAlertController(title: "アップロード先を選択", message: nil, preferredStyle: .ActionSheet)
-        let firstAction = UIAlertAction(title: "Facebookに投稿", style: .Default){
-            action in
-            self.postToSNS(SLServiceTypeFacebook)
-        }
-        let secondAction = UIAlertAction(title: "twitterに投稿", style: .Default){
-            action in
-            self.postToSNS(SLServiceTypeTwitter)
-        }
-        
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
-        
-        //設定したアラートに登録
-        alertController.addAction(firstAction)
-        alertController.addAction(secondAction)
-        alertController.addAction(cancelAction)
-        
-        //アラートを表示
-        presentViewController(alertController, animated: true, completion: nil)
-        
-    }
-    
      //UIImageをNSDataに変換
     
     func ImageString(image:UIImage) -> NSData {
@@ -223,11 +177,24 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     return data
     
     }
-   
+    
+    func simpleAlert(titleString: String){
+        let alertController = UIAlertController(title: titleString, message: nil, preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
     
 
     //配列の保存
     @IBAction func savePage(){
+        
+        //画像・文字が配置されていませんアラート
+        guard let selectedPhoto = cafeImageView.image else{
+            simpleAlert("画像を選択してください")
+            return
+        }
         
         nameArray.append(nameTextField.text!) //配列の指定 !はnilを避けるため
         imgArray.append(self.ImageString(cafeImageView.image!))
@@ -246,7 +213,9 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         
         self.performSegueWithIdentifier("toListView", sender: nil) //登録一覧へ遷移 
         
+      
         }
+    
     
     /* Segue 準備
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

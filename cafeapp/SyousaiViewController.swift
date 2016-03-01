@@ -27,20 +27,8 @@ class SyousaiViewController: UIViewController {
     
     let saveData = NSUserDefaults.standardUserDefaults()
     
-    //save.data〜の変数を作る
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        /*
-         //画像を取り出す
-        cafeImageView.image = selectedImg
-        
-        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
-        cafeImageView.contentMode = UIViewContentMode.ScaleAspectFit
-        */
-        
         
         //TorokuViewの配列を保持して取り出す
         var nameData =  saveData.arrayForKey("name")!
@@ -78,6 +66,18 @@ class SyousaiViewController: UIViewController {
         cafeImageView.image = gazouImg
 
         // Do any additional setup after loading the view.
+        
+        //navigationvarの色指定
+        let naviColor = UIColor(red: 101/255, green: 186/255, blue: 164/255, alpha: 1.0)
+        
+        // 背景の色を変える。
+        self.navigationController?.navigationBar.barTintColor = naviColor
+        
+        // itemボタン色指定
+        let textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
+        // ボタンの色を変える
+        self.navigationController?.navigationBar.tintColor = textColor
     }
     
     

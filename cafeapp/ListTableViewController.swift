@@ -42,6 +42,18 @@ class ListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //navigationvarの色指定
+        let naviColor = UIColor(red: 101/255, green: 186/255, blue: 164/255, alpha: 1.0)
+        
+        // 背景の色を変える。
+        self.navigationController?.navigationBar.barTintColor = naviColor
+        
+        // itemボタン色指定
+        let textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
+        // ボタンの色を変える
+        self.navigationController?.navigationBar.tintColor = textColor
     }
     
 
@@ -115,54 +127,6 @@ class ListTableViewController: UITableViewController {
     }
     
     
-//    
-//    // Cell が選択された場合
-//    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-//        
-//        // [indexPath.row] から画像名を探し、UImage を設定
-//        
-//        selectedImage =  UIImage (named:"\(imgArray[indexPath.row])")
-//        
-//        //[indexPath.row] からnameを探し、UILabel を設定
-//        
-//        selectedLabel1 = nameArray[indexPath.row] as! String
-//        
-//        
-//        //[indexPath.row] からlocationを探し、UILabel を設定
-//        
-//        selectedLabel2 = locationArray[indexPath.row] as! String
-//
-//        
-//        //[indexPath.row] からmemoを探し、UILabel を設定
-//        
-//        selectedLabel2 = locationArray[indexPath.row] as! String
-//        
-//        /*
-//        selectedLabel = UILabel(named:"\(memoArray[indexPath.row])")
-//        */
-//        
-//        if selectedImage != nil {
-//            // SyousaiViewController へ遷移するために Segue を呼び出す
-//            performSegueWithIdentifier("toSyousaiView",sender: nil)
-//        }
-//        
-//        if selectedLabel1 != nil {
-//            // SyousaiViewController へ遷移するために Segue を呼び出す
-//            performSegueWithIdentifier("toSyousaiView",sender: nil)
-//        }
-//        
-//        if selectedLabel2 != nil {
-//            // SyousaiViewController へ遷移するために Segue を呼び出す
-//            performSegueWithIdentifier("toSyousaiView",sender: nil)
-//        }
-//        
-//        if selectedLabel3 != nil {
-//            // SyousaiViewController へ遷移するために Segue を呼び出す
-//            performSegueWithIdentifier("toSyousaiView",sender: nil)
-//        }
-//        
-//    }
-//    
        override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
             nameIndex = indexPath.row //代入　indexPath.rowがセルについてる数字（何番目の配列か）
@@ -183,8 +147,31 @@ class ListTableViewController: UITableViewController {
             
         }
     }
-
-
+    
+    //削除ボタン設定許可
+    override func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    //削除ボタン設定
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            nameArray.removeAtIndex(indexPath.row)
+            locationArray.removeAtIndex(indexPath.row)
+            memoArray.removeAtIndex(indexPath.row)
+            imgArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            //消したデータを保存
+            saveData.setObject(nameArray, forKey: "name")
+            saveData.setObject(locationArray, forKey: "location")
+            saveData.setObject(memoArray, forKey: "memo")
+            saveData.setObject(imgArray, forKey: "imageview")
+            
+        }
+    }
+    
 
     /* override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
