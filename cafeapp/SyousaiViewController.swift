@@ -49,24 +49,22 @@ class SyousaiViewController: UIViewController {
         
         var memoData = saveData.arrayForKey("memo")!
         
-        print("ここで落ちる", saveData.dataForKey("imageview"))
+        //print("ここで落ちる", saveData.dataForKey("imageview"))
 //        cafeImageView.image = UIImage(data: saveData.dataForKey("imageview")!)
         
         
         //配列の中から1つのnameラベルを取り出す
 // MARK: -  あとで修正        
-        //nameLabel.text = nameData[selectedImg]
+        nameLabel.text = nameData[selectedImg] as? String
 
     
         //配列の中から1つのlocationラベルを取り出す
+        locationLabel.text = locationData[selectedImg] as? String
         
-        let locationL = locationData[selectedImg]
-       
         
         //配列の中から1つのmemoラベルを取り出す
        
-        let memoL = memoData[selectedImg]
-        
+        memoLabel.text = memoData[selectedImg] as? String
         
         var gazouData =  saveData.arrayForKey("imageview")! as! [NSData]
         

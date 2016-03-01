@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     
-    //Finishからスタート画面にもどるメソッド
+    //Finishからスタート画面にもどるメソッド（ViewController上に置く Exitで指定）
     @IBAction func back (segue: UIStoryboardSegue) {
         
     }

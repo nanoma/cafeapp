@@ -74,7 +74,7 @@ class ListTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    //NSDataをUIImageに変換する（ここで必要？）
+    //NSDataをUIImageに変換する
     func StringImage(imageString:NSData) -> UIImage?{
         
         //NSDataからUIImageを生成？？
@@ -90,10 +90,7 @@ class ListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-    // MARK: - Table view data source
+    // MARK: - Table view data source   簡単に戻ってこられる！
     
     //セクションの数を指定
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -182,6 +179,7 @@ class ListTableViewController: UITableViewController {
             let subVC: SyousaiViewController = (segue.destinationViewController as? SyousaiViewController)!
             // SyousaiViewController のselectedImgに選択された画像を設定する
             subVC.selectedImg = nameIndex  //何番目の配列を取り出すかがselectedImg
+            
             
         }
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Social
+import Social //SNS機能をつける
 
 class TorokuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
@@ -23,11 +23,12 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet var locationTextField: UITextField!
     @IBOutlet var memoTextField: UITextField!
     
+    // name,location,memoに記入される文字列
     var name: String = ""
     var location: String = ""
     var memo: String = ""
     
-    
+
     var cafe = Cafe()
 
     
@@ -40,9 +41,10 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         /*データを保存
         var cafeList = NSUserDefaults.standardUserDefaults().objectForKey("cafeList")
         
-        /*データを保存
+       
         if let cafeListData = NSUserDefaults.standardUserDefaults().objectForKey("cafeList") as? NSData {
             print("success")
             if let cafeList = NSKeyedUnarchiver.unarchiveObjectWithData(cafeListData) as? [Cafe] {
@@ -80,6 +82,28 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         
         */
         // Do any additional setup after loading the view. 
+        
+        //前回保存したものを呼び出し
+        if saveData.arrayForKey("name") != nil{
+            nameArray = saveData.arrayForKey("name")!
+            print("\(nameArray.count)")
+        }
+        
+        if saveData.arrayForKey("location") != nil{
+            locationArray = saveData.arrayForKey("location")!
+            print("\(locationArray.count)")
+            
+        }
+        
+        if saveData.arrayForKey("memo") != nil{
+            memoArray = saveData.arrayForKey("memo")!
+            print("\(memoArray.count)")
+        }
+        
+        if saveData.arrayForKey("imageview") != nil{
+            imgArray = saveData.arrayForKey("imageview")!
+            print("\(imgArray.count)")
+        }
     }
     
     //カメラ・アルバム呼び出しメソッド
@@ -160,11 +184,12 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     //アップロード時に呼ばれるメソッド
     @IBAction func upLoadButtonTapped(sender: UIButton){
         
-        /*guard let selectedPhoto = cafeImageView.image else{
+        //画像を使用してない時に出現？
+        guard let selectedPhoto = cafeImageView.image else{
             simpleAlert("画像がありません")
             return
         }
-        */
+    
         
         
         let alertController = UIAlertController(title: "アップロード先を選択", message: nil, preferredStyle: .ActionSheet)
@@ -213,12 +238,6 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         saveData.setObject(locationArray, forKey: "location")
         saveData.setObject(memoArray, forKey: "memo")
         saveData.setObject(imgArray, forKey: "imageview")
-        
-        //前回保存したものを呼び出し　？？
-        nameArray = saveData.arrayForKey("name")!
-        locationArray = saveData.arrayForKey("location")!
-        memoArray = saveData.arrayForKey("memo")!
-        imgArray = saveData.arrayForKey("imageview")!
         
         
         self.ImageString(cafeImageView.image!)
