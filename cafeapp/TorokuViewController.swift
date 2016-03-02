@@ -10,6 +10,7 @@ import UIKit
 
 class TorokuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var cafeImageView: UIImageView!
     
     //配列の中身は空ですよ
@@ -117,8 +118,13 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         
         // ボタンの色を変える
         self.navigationController?.navigationBar.tintColor = textColor
-
-
+        
+        //textFiel の情報を受け取るための delegate を設定
+        nameTextField.delegate = self
+        locationTextField.delegate = self
+        memoTextField.delegate = self
+        
+        
     }
     
     //カメラ・アルバム呼び出しメソッド
@@ -139,6 +145,7 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         cafeImageView.image = image
 
     }
+    
     
     //カメラ呼び出しボタン
     @IBAction func selctButtonTapped(sender: UIButton){
@@ -217,6 +224,87 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
         
       
         }
+    //textFieldを終了させる
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    //textfieldを入力するときにキーボードと重ならないようにする
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        NSNotificationCenter.defaultCenter().addObserver(self,
+//            selector: "keyboardWillBeShown:",
+//            name: UIKeyboardWillShowNotification,
+//            object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self,
+//            selector: "keyboardWillBeHidden:",
+//            name: UIKeyboardWillHideNotification,
+//            object: nil)
+//    }
+//    
+//    override func viewWillDisappear(animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        
+//        NSNotificationCenter.defaultCenter().removeObserver(self,
+//            name: UIKeyboardWillShowNotification,
+//            object: nil)
+//        NSNotificationCenter.defaultCenter().removeObserver(self,
+//            name: UIKeyboardWillHideNotification,
+//            object: nil)
+//    }
+//    
+//    func keyboardWillBeShown(notification: NSNotification) {
+//        if let userInfo = notification.userInfo {
+//            if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
+//                restoreScrollViewSize()
+//                
+//                let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
+//                let offsetY: CGFloat = CGRectGetMaxY(textField.frame) - CGRectGetMinY(convertedKeyboardFrame)
+//                if offsetY < 0 { return }
+//                updateScrollViewSize(offsetY, duration: animationDuration)
+//            }
+//        }
+//    }
+//    
+//    func keyboardWillBeHidden(notification: NSNotification) {
+//        
+//        restoreScrollViewSize()
+//    }
+//    
+//    // MARK: - UITextFieldDelegate
+//    
+//    func locationTextFieldShouldReturn(textField: UITextField) -> Bool {
+//        locationTextField.resignFirstResponder()
+//        return true
+//    }
+//    
+//    func memoTextFieldShouldReturn(textField: UITextField) -> Bool {
+//        memoTextField.resignFirstResponder()
+//        return true
+//    }
+//    
+//    func updateScrollViewSize(moveSize: CGFloat, duration: NSTimeInterval) {
+//        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+//        UIView.setAnimationDuration(duration)
+//        
+//        let contentInsets = UIEdgeInsetsMake(0, 0, moveSize, 0)
+//        scrollView.contentInset = contentInsets
+//        scrollView.scrollIndicatorInsets = contentInsets
+//        scrollView.contentOffset = CGPointMake(0, moveSize)
+//        
+//        UIView.commitAnimations()
+//    }
+//
+    
+    
+
+    
+
     
     
     /* Segue 準備
