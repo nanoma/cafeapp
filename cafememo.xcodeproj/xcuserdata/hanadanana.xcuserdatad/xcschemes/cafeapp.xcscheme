@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4DFB43BF1C72BE9600D5F725"
-               BuildableName = "cafeapp.app"
-               BlueprintName = "cafeapp"
-               ReferencedContainer = "container:cafeapp.xcodeproj">
+               BuildableName = "cafememo.app"
+               BlueprintName = "cafememo"
+               ReferencedContainer = "container:cafememo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4DFB43D31C72BE9600D5F725"
-               BuildableName = "cafeappTests.xctest"
-               BlueprintName = "cafeappTests"
-               ReferencedContainer = "container:cafeapp.xcodeproj">
+               BuildableName = "cafememo.xctest"
+               BlueprintName = "cafememoTests"
+               ReferencedContainer = "container:cafememo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4DFB43DE1C72BE9600D5F725"
-               BuildableName = "cafeappUITests.xctest"
-               BlueprintName = "cafeappUITests"
-               ReferencedContainer = "container:cafeapp.xcodeproj">
+               BuildableName = "cafememo.xctest"
+               BlueprintName = "cafememoUITests"
+               ReferencedContainer = "container:cafememo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DFB43BF1C72BE9600D5F725"
-            BuildableName = "cafeapp.app"
-            BlueprintName = "cafeapp"
-            ReferencedContainer = "container:cafeapp.xcodeproj">
+            BuildableName = "cafememo.app"
+            BlueprintName = "cafememo"
+            ReferencedContainer = "container:cafememo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DFB43BF1C72BE9600D5F725"
-            BuildableName = "cafeapp.app"
-            BlueprintName = "cafeapp"
-            ReferencedContainer = "container:cafeapp.xcodeproj">
+            BuildableName = "cafememo.app"
+            BlueprintName = "cafememo"
+            ReferencedContainer = "container:cafememo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DFB43BF1C72BE9600D5F725"
-            BuildableName = "cafeapp.app"
-            BlueprintName = "cafeapp"
-            ReferencedContainer = "container:cafeapp.xcodeproj">
+            BuildableName = "cafememo.app"
+            BlueprintName = "cafememo"
+            ReferencedContainer = "container:cafememo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
