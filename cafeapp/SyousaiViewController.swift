@@ -78,6 +78,12 @@ class SyousaiViewController: UIViewController {
         
         // ボタンの色を変える
         self.navigationController?.navigationBar.tintColor = textColor
+        
+        //labelの文字数が幅を越えたら改行
+        nameLabel.lineBreakMode = .ByWordWrapping
+        locationLabel.lineBreakMode = .ByWordWrapping
+        memoLabel.lineBreakMode = .ByWordWrapping
+
     }
     
     

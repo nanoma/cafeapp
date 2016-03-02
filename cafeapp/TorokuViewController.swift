@@ -39,6 +39,8 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
         
          /*データを保存
         var cafeList = NSUserDefaults.standardUserDefaults().objectForKey("cafeList")
