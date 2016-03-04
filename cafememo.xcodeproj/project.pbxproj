@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4A26D81C899BF700037EE9 /* cafelaunchimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A26D71C899BF700037EE9 /* cafelaunchimg.png */; };
+		4D4A26E11C89ACEE00037EE9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A26DA1C89ACEE00037EE9 /* .gitignore */; };
+		4D4A26E21C89ACEE00037EE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A26DC1C89ACEE00037EE9 /* Default-568h@2x.png */; };
+		4D4A26E31C89ACEE00037EE9 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A26DD1C89ACEE00037EE9 /* Default-667h@2x.png */; };
+		4D4A26E41C89ACEE00037EE9 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A26DE1C89ACEE00037EE9 /* Default-736h@3x.png */; };
+		4D4A26E61C89ACEE00037EE9 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A26E01C89ACEE00037EE9 /* StoryboardHelper.swift */; };
 		4D669D671C79DE0C005711EA /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669D661C79DE0C005711EA /* ListTableViewController.swift */; };
 		4D669D6A1C79DE4C005711EA /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669D681C79DE4C005711EA /* ListTableViewCell.swift */; };
 		4D669D6B1C79DE4C005711EA /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D669D691C79DE4C005711EA /* ListTableViewCell.xib */; };
@@ -38,9 +44,6 @@
 		4D669DD21C87382D0059D173 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D669DBC1C87382D0059D173 /* iTunesArtwork.png */; };
 		4D669DD31C87382D0059D173 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D669DBD1C87382D0059D173 /* iTunesArtwork@2x.png */; };
 		4D669DD41C87382D0059D173 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4D669DBE1C87382D0059D173 /* README.md */; };
-		4D669DE91C80197B005711EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D669DE61C80197B005711EA /* Default-568h@2x.png */; };
-		4D669DEA1C80197B005711EA /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D669DE71C80197B005711EA /* Default-667h@2x.png */; };
-		4D669DEB1C80197B005711EA /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D669DE81C80197B005711EA /* Default-736h@3x.png */; };
 		4D9830121C7843B600C4AC91 /* cafe22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9830101C7843B600C4AC91 /* cafe22.jpg */; };
 		4D9830131C7843B600C4AC91 /* cafe_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9830111C7843B600C4AC91 /* cafe_back.jpg */; };
 		4DA246D51C86B0E40027F165 /* woodbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DA246D41C86B0E40027F165 /* woodbackground.jpg */; };
@@ -77,6 +80,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D4A26D71C899BF700037EE9 /* cafelaunchimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafelaunchimg.png; sourceTree = "<group>"; };
+		4D4A26DA1C89ACEE00037EE9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4D4A26DC1C89ACEE00037EE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4D4A26DD1C89ACEE00037EE9 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		4D4A26DE1C89ACEE00037EE9 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		4D4A26E01C89ACEE00037EE9 /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		4D669D661C79DE0C005711EA /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		4D669D681C79DE4C005711EA /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		4D669D691C79DE4C005711EA /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
@@ -108,9 +117,6 @@
 		4D669DBC1C87382D0059D173 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		4D669DBD1C87382D0059D173 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		4D669DBE1C87382D0059D173 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4D669DE61C80197B005711EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4D669DE71C80197B005711EA /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
-		4D669DE81C80197B005711EA /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		4D9830101C7843B600C4AC91 /* cafe22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cafe22.jpg; sourceTree = "<group>"; };
 		4D9830111C7843B600C4AC91 /* cafe_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cafe_back.jpg; sourceTree = "<group>"; };
 		4DA246D41C86B0E40027F165 /* woodbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodbackground.jpg; sourceTree = "<group>"; };
@@ -160,6 +166,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D4A26D91C89ACED00037EE9 /* StoryboardHelper-master */ = {
+			isa = PBXGroup;
+			children = (
+				4D4A26DA1C89ACEE00037EE9 /* .gitignore */,
+				4D4A26DB1C89ACEE00037EE9 /* Defaults */,
+				4D4A26E01C89ACEE00037EE9 /* StoryboardHelper.swift */,
+			);
+			path = "StoryboardHelper-master";
+			sourceTree = "<group>";
+		};
+		4D4A26DB1C89ACEE00037EE9 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				4D4A26DC1C89ACEE00037EE9 /* Default-568h@2x.png */,
+				4D4A26DD1C89ACEE00037EE9 /* Default-667h@2x.png */,
+				4D4A26DE1C89ACEE00037EE9 /* Default-736h@3x.png */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
 		4D669DA61C7B3F55005711EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,19 +231,10 @@
 			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
-		4D669DE51C80197B005711EA /* Defaults-master */ = {
-			isa = PBXGroup;
-			children = (
-				4D669DE61C80197B005711EA /* Default-568h@2x.png */,
-				4D669DE71C80197B005711EA /* Default-667h@2x.png */,
-				4D669DE81C80197B005711EA /* Default-736h@3x.png */,
-			);
-			path = "Defaults-master";
-			sourceTree = "<group>";
-		};
 		4D98300F1C7843B600C4AC91 /* cafeimage */ = {
 			isa = PBXGroup;
 			children = (
+				4D4A26D71C899BF700037EE9 /* cafelaunchimg.png */,
 				4DA246E01C86E7150027F165 /* snsbutton.png */,
 				4DA246DE1C86DF370027F165 /* icon_000010_256.png */,
 				4DA246DA1C86D85E0027F165 /* icon_045440_256.png */,
@@ -257,8 +274,8 @@
 		4DFB43C21C72BE9600D5F725 /* cafeapp */ = {
 			isa = PBXGroup;
 			children = (
+				4D4A26D91C89ACED00037EE9 /* StoryboardHelper-master */,
 				4D669DA71C87382D0059D173 /* cafeios */,
-				4D669DE51C80197B005711EA /* Defaults-master */,
 				4D669DA61C7B3F55005711EA /* Model */,
 				4D98300F1C7843B600C4AC91 /* cafeimage */,
 				4DFB43C31C72BE9600D5F725 /* AppDelegate.swift */,
@@ -412,18 +429,19 @@
 				4D669DCA1C87382D0059D173 /* Icon-Small@3x.png in Resources */,
 				4D669DD31C87382D0059D173 /* iTunesArtwork@2x.png in Resources */,
 				4DA246D51C86B0E40027F165 /* woodbackground.jpg in Resources */,
+				4D4A26E21C89ACEE00037EE9 /* Default-568h@2x.png in Resources */,
 				4DFB43CB1C72BE9600D5F725 /* Assets.xcassets in Resources */,
 				4D669DC61C87382D0059D173 /* Icon-76@2x.png in Resources */,
 				4D669DCC1C87382D0059D173 /* Icon-72.png in Resources */,
 				4D669DD11C87382D0059D173 /* Icon@2x.png in Resources */,
 				4D669DB61C80179E005711EA /* cafetop_done.png in Resources */,
 				4D669DAF1C7FF99C005711EA /* torokubutton.png in Resources */,
-				4D669DE91C80197B005711EA /* Default-568h@2x.png in Resources */,
 				4D669DCF1C87382D0059D173 /* Icon-Small-50@2x.png in Resources */,
 				4DFB43C91C72BE9600D5F725 /* Main.storyboard in Resources */,
 				4D9830121C7843B600C4AC91 /* cafe22.jpg in Resources */,
-				4D669DEA1C80197B005711EA /* Default-667h@2x.png in Resources */,
+				4D4A26D81C899BF700037EE9 /* cafelaunchimg.png in Resources */,
 				4D669DD01C87382D0059D173 /* Icon.png in Resources */,
+				4D4A26E31C89ACEE00037EE9 /* Default-667h@2x.png in Resources */,
 				4D669DAE1C7FF99C005711EA /* cafetop.png in Resources */,
 				4D669DCE1C87382D0059D173 /* Icon-Small-50.png in Resources */,
 				4D669DCD1C87382D0059D173 /* Icon-72@2x.png in Resources */,
@@ -436,9 +454,10 @@
 				4D669DD21C87382D0059D173 /* iTunesArtwork.png in Resources */,
 				4D669DC21C87382D0059D173 /* Icon-40@3x.png in Resources */,
 				4DA246D71C86D0D50027F165 /* torokuwaku.png in Resources */,
-				4D669DEB1C80197B005711EA /* Default-736h@3x.png in Resources */,
 				4D9830131C7843B600C4AC91 /* cafe_back.jpg in Resources */,
+				4D4A26E11C89ACEE00037EE9 /* .gitignore in Resources */,
 				4D669DC31C87382D0059D173 /* Icon-60@2x.png in Resources */,
+				4D4A26E41C89ACEE00037EE9 /* Default-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +489,7 @@
 				4D669DAA1C7C23D4005711EA /* SyousaiViewController.swift in Sources */,
 				4D669D671C79DE0C005711EA /* ListTableViewController.swift in Sources */,
 				4D669DD41C87382D0059D173 /* README.md in Sources */,
+				4D4A26E61C89ACEE00037EE9 /* StoryboardHelper.swift in Sources */,
 				4D669D6A1C79DE4C005711EA /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

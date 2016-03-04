@@ -199,8 +199,8 @@ class TorokuViewController: UIViewController, UINavigationControllerDelegate, UI
     //配列の保存
     @IBAction func savePage(){
         
-        //画像・文字が配置されていませんアラート
-        guard let selectedPhoto = cafeImageView.image else{
+        //画像が配置されていませんアラート
+        guard let selectedPhoto = cafeImageView.image else {
             simpleAlert("画像を選択してください")
             return
         }
